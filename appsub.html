@@ -1,66 +1,112 @@
 
 
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Sign in to OELSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Application Submition</title>
+        <meta name="description" content="Application submition">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style type="text/css">
-      body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
-      }
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
 
-      .form-signin {
-        max-width: 300px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
-
-    </style>
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
   </head>
-
   <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Cutra</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Home</a></li>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li class="active"><a href="#">Bill Gates</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <div class="container">
+      <div class="hero-unit">
+        <h3 class="form-signin-heading">Submit your new app</h3>
+        <form class="form-signin" method="POST" action="">
+          <div class="pull-left">
+            <img src="apple-touch-icon.png" alt="App Default Icon" height="100" width="100">
+          </div>
+          <div class="pull-left" style="padding-left:10px;">
+            <div>
+              <label for="applicationName">Name:</label>
+              <input id="applicationName" type="text" class="input-block-level" placeholder="Application Name" name="applicationName">
+            </div>
+            <div>
+              <label for="applicationLanguage">Language:</label>
+              <select id="applicationLanguage" name="applicationLanguage">
+                <option value="AF">Afrikaans</option>
+                <option value="DA">Danish</option>
+                <option value="DE">German</option>
+                <option value="EL">Greek</option>
+                <option value="EN" selected >English</option>
+                <option value="ES">Spanish</option>
+                <option value="FR">French</option>
+                <option value="FY">Frisian</option>
+                <option value="IT">Italian</option>
+                <option value="IW">Hebrew</option>
+                <option value="JA">Japanese</option>
+                <option value="KO">Korean</option>
+                <option value="RU">Russian</option>
+                <option value="ZH">Chinese</option>
+              </select>
+            </div>
+            <div>
+              <label for="applicationType">Type:</label>
+              <input type="radio" name="applicationType" value="ios" class="appType ios" />
+              <div></div>
+              <input type="radio" name="applicationType" value="android" class="appType android" />
+              <div></div>
+              <input type="radio" name="applicationType" value="windows" class="appType windows" />
+              <div></div>
+            </div>
+            <div>
+              <label for="datafile">Key file:</label>
+              <input id="file" type="file" name="datafile" size="40">  
+              <output id="list"></output>
+              <div>
 
-      <form class="form-signin" method="POST" action="login_process.php">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Username" name="username">
-        <input type="password" class="input-block-level" placeholder="Password" name="password">
-        <!-- <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label> -->
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-      </form>
+              </div>
+            </div>
+          </div>
+          <div style="clear:both;"></div>
+          <br />
+          <button class="btn btn-large btn-secondary" type="submit">Submit</button>
+        </form>
+      </div>
 
     </div> <!-- /container -->
 
@@ -68,7 +114,94 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script type="text/javascript">
+      $(".appType + div").click(function(){
+        var that = $(this);
+        $(".appType + div").prev().removeAttr("checked");
+        $(".appType + div").css("border-color","");
+        $(".appType + div").css("outline","");
 
+        that.prev().attr("checked","checked");
+        that.css("border-color","rgba(82,168,236,0.8)");
+        that.css("outline","-webkit-focus-ring-color auto 5px");
+      });
+
+      $('form').submit(function(e) {
+         e.preventDefault();
+         // First we get a reference to the location of the user’s name data:
+        var devRef = new Firebase('https://cutra.firebaseio.com/devs/fred/apps');
+        var appRef = new Firebase('https://cutra.firebaseio.com/apps');
+
+        var appName = $("#applicationName").val();
+        var lenguages = $("#applicationLanguage")[0].options;
+        var appLanguage = lenguages[lenguages.selectedIndex].value;
+        var appLanguageText = lenguages[lenguages.selectedIndex].text;
+        var appType = $("input:radio[name='applicationType']:checked").val();
+        var appkeys = $("#file").data('keys');
+        
+        var appProjects = {};
+        appProjects[appLanguage]={
+          contributors:0,
+          percentage:100,
+          original:true,
+          version:"1.0",
+          approved:false,
+          name:appLanguageText,
+          keys:appkeys
+        };
+
+        var app = {
+          name: appName, 
+          projectscount:0, 
+          type:appType, 
+          language:appLanguage, 
+          projects:appProjects
+        }
+
+        var done = false;
+        var newappRef = devRef.push(app);
+        newappRef.child("id").set(newappRef.name());
+
+        app["id"]=newappRef.name();
+        appRef.child(newappRef.name()).set(app, function(){
+          if (!done) 
+            done = true;
+          else
+            window.location.href ="applist.html";
+        });
+        
+        // And then we write data to his first and last name locations:
+        if (!done) 
+            done = true;
+          else
+            window.location.href ="applist.html";
+      });
+
+      function handleFileSelect(evt) {
+        var file = evt.target.files[0]; // FileList object
+        
+        var reader = new FileReader();
+        reader.onload = (function(fr) {
+            return function(e) {
+              var keys = {};
+              var text = e.target.result;
+              text = text.replace(/"/g,'');
+              text = text.replace(/;/g,'');
+              var lines = text.split('\n');
+              for (var i = 0; i < lines.length; i++) {
+                var keyValue = lines[i].split('=');
+                keys[keyValue[0]]=keyValue[1]; 
+              };
+              $("#file").data("keys",keys);
+            }
+        })(file);
+
+        reader.readAsText(file);
+      }
+
+      document.getElementById('file').addEventListener('change', handleFileSelect, false);
+    </script>
   </body>
 </html>

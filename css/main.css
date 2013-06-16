@@ -3,10 +3,35 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+input[type="radio"].appType 
+{
+    display:none;
+}
 
+input[type="radio"].appType + div
+{
+	width: 70px;
+  	height: 70px;
+  	margin: 0 5px 0 5px;
+  	display:inline-block;
+  	cursor:pointer;
+  	background: url("../img/logo-reel.png") 0 0 no-repeat;
+}
 
+input[type="radio"].appType.ios + div
+{
+	background-position: 0px -12px; 
+}
 
+input[type="radio"].appType.android + div
+{
+	background-position: -70px -12px; 
+}
 
+input[type="radio"].appType.windows + div
+{
+	background-position: -142px -12px; 
+}
 
 
 
