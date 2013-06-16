@@ -1,7 +1,124 @@
 {
-"data":[
-	{"id":"832489283", "name":"Angry Birds", "projectscount":12},
-	{"id":"42434", "name":"OuchMyBalls", "projectscount":2},
-	{"id":"832489283", "name":"Angry Birds", "projectscount":4}
-]
+    "devs": {
+        "fred": {
+            "apps": {
+                "31123123": {
+                    "name": "AngryBirds",
+                    "id":"31123123",
+                    "projectscount": 12,
+                    "language":"EN",
+                    "projects": {
+		                "SP": {
+		                	"name":"Spanish",
+		                    "percentage": 30,
+		                    "contributors": 3,
+		                    "version":"1.0"
+		                },
+		                "FR": {
+		                	"name":"French",
+		                    "percentage": 43,
+		                    "contributors": 3,
+		                    "version":"1.0"
+		                }
+		            }
+                },
+                "324243": {
+                	"id":"324243",
+                    "name": "OuchMyBalls",
+                    "projectscount": 2,
+                    "language":"EN",
+                    "projects": {
+		                "FR": {
+		                	"name":"French",
+		                    "percentage": 43,
+		                    "contributors": 3,
+		                    "version":"1.2"
+		                }
+		            }
+                },
+                "32424343534": {
+                	"id":"32424343534",
+                    "name": "Passport",
+                    "projectscount": 4,
+                    "language":"EN",
+                    "projects": {
+		                "FR": {
+		                	"name":"French",
+		                    "percentage": 43,
+		                    "approved":"false",
+		                    "contributors": 3,
+		                    "version":"1.2"
+		                },
+		                "KR": {
+		                    "percentage": 43,
+		                    "approved":"false",
+		                    "contributors": 3,
+		                    "version":"1.3"
+		                },
+		                "CH": {
+		                    "percentage": 100,
+		                    "approved":"false",
+		                    "contributors": 3,
+		                    "version":"1.0"
+		                }
+		            }
+                }
+            }
+        }
+    },
+    "translators": {
+        "Michael": {
+            
+        }
+    },
+    "apps": {
+        "101": {
+        	"name": "AngryBirds",
+            "dev": "fred",
+            "language": "EN",
+			"projects": {
+                "sp": {
+                    "percentage": 30,
+                    "contributors": 3
+                },
+                "fr": {
+                    "percentage": 43,
+                    "contributors": 3
+                }
+            }
+        },
+        "102": {
+        	"name": "OuchMyBalls",
+            "dev":"fred",
+            "language": "EN",
+            "projects": {
+                "fr": {
+                    "percentage": 43,
+                    "contributors": 3
+                }
+            }
+        },
+        "103": {
+        	"name": "Passport",
+            "dev": "fred",
+            "language": "SP",
+            "projects": {
+                "FR": {
+                    "percentage": 43,
+                    "approved":"false",
+                    "contributors": 3
+                },
+                "KR": {
+                    "percentage": 43,
+                    "approved":"false",
+                    "contributors": 3
+                },
+                "CH": {
+                    "percentage": 100,
+                    "approved":"false",
+                    "contributors": 3
+                }
+            }
+        }
+    }
 }

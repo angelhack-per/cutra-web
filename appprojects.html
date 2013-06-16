@@ -30,7 +30,7 @@
 
     <title>App List</title>
 </head>
-    <body style="margin-right:13; margin-left:13; margin-top:0;padding-top:0;"  ng-controller="MyCtrl" >
+    <body style="margin-right:13; margin-left:13; margin-top:0;padding-top:0;"  ng-controller="AppProjectsCtrl" >
            <!-- JS SDK -->
         <div id="header" >
   <div id="h_left">
@@ -59,19 +59,20 @@
     <div style="min-height:500px">
   <div >
     <div style="width:500px" >
+     <h2>{{appName}}</h2>
      <table class="table table-condensed table-striped table-hover">
           <thead>
             <tr>
-              <th>Application</th>
-              <th>Original Language</th>
-              <th>Projects Count</th>
+              <th>Language</th>
+              <th>Percentage Completed</th>
+              <th>Contributors</th>
             </tr>
           </thead>
           <tbody>
-          <tr ng-repeat="app in items">
-            <td><a href="/appprojects.html?app={{app.id}}&appName={{app.name}}"</a>{{app.name}}</td>
-            <td>{{app.language}}</td>
-            <td>{{app.projectscount}}</td>
+          <tr ng-repeat="language in projects">
+            <td>{{language.name}}</a></td>
+            <td>{{language.percentage}}</td>
+            <td>{{language.contributors}}</td>
            </tr>
           </tbody>
       </table>
@@ -79,6 +80,7 @@
   </div>
   </div>
 </div>
+    <hr />
     </body>
     <script type="text/javascript" src="js/session.js"></script>
     <script type="text/javascript" src="js/applist.js"></script>

@@ -2,16 +2,29 @@ var myapp = angular.module('myapp', ['firebase']);
 
     myapp.controller('MyCtrl', ['$scope', 'angularFireCollection',
       function($scope, angularFireCollection) {
-        var url = 'https://cutra.firebaseio.com/data';
+        var url = 'https://cutra.firebaseio.com/devs/'+loggedInUser+'/apps';
         $scope.items = angularFireCollection(url);
         console.log($scope.items);
       }
-    ]);    
-    
-window.onload=function(){
-  
-}
+    ]);
 
+      myapp.controller('AppProjectsCtrl', ['$scope', 'angularFireCollection',
+      function($scope, angularFireCollection) {
+        var app = get('app');
+        var url = 'https://cutra.firebaseio.com/devs/'+loggedInUser+'/apps/'+app+'/projects';
+        console.log(url);
+        $scope.projects = angularFireCollection(url, $scope);
+        $scope.appName=get('appName');
+        // $scope.projects = angularFireCollection(url);
+        // console.log($scope.items);
+      }
+    ]);    
+
+
+function get(name){
+   if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+}
 
 // ??
 
