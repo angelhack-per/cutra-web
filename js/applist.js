@@ -1,4 +1,5 @@
 var myapp = angular.module('myapp', ['firebase']);
+          
 
     myapp.controller('MyCtrl', ['$scope', 'angularFireCollection',
       function($scope, angularFireCollection) {
