@@ -1,74 +1,87 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Sign in to OELSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html xmlns:fb="http://ogp.me/ns/fb#" ng-app="myapp">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />    
+    <meta http-equiv="Content-Type" content="image/png" />
+    <meta http-equiv="CACHE-CONTROL" content="no-cache,no-store,must-revalidate" />    
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <style type="text/css">
-      body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
-      }
+    <!-- <script type="text/javascript" src="menu/resources/stmenu.js"></script>
+    -->
+  <!-- add Jonathan 2012-06-10 - cambio de menu -->
 
-      .form-signin {
-        max-width: 300px;
-        padding: 19px 29px 29px;
-        margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
-        -webkit-border-radius: 5px;
-           -moz-border-radius: 5px;
-                border-radius: 5px;
-        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-                box-shadow: 0 1px 2px rgba(0,0,0,.05);
-      }
-      .form-signin .form-signin-heading,
-      .form-signin .checkbox {
-        margin-bottom: 10px;
-      }
-      .form-signin input[type="text"],
-      .form-signin input[type="password"] {
-        font-size: 16px;
-        height: auto;
-        margin-bottom: 15px;
-        padding: 7px 9px;
-      }
 
-    </style>
-    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
 
-  </head>
 
-  <body>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <!-- // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script> -->
+    <script type="text/javascript" src="js/vendor/angular.js"></script>
+    <script src="js/angularFire.js"></script>
 
-    <div class="container">
 
-      <form class="form-signin" method="POST" action="login_process.php">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="text" class="input-block-level" placeholder="Username" name="username">
-        <input type="password" class="input-block-level" placeholder="Password" name="password">
-        <!-- <label class="checkbox">
-          <input type="checkbox" value="remember-me"> Remember me
-        </label> -->
-        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
-      </form>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    
+    <link rel="shortcut icon" href="./images/hc_favicon.ico" type="image/x-icon">
 
-    </div> <!-- /container -->
+    <!-- <link rel="stylesheet" type="text/css" href="templates/template_style.css"> -->
+    <!-- styles-->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
 
-  </body>
+    <title>App List</title>
+</head>
+    <body style="margin-right:13; margin-left:13; margin-top:0;padding-top:0;"  ng-controller="MyCtrl" >
+           <!-- JS SDK -->
+        <div id="header" >
+  <div id="h_left">
+  </div>
+  <div id="h_right">
+    <div id="h_r_top">
+      <!-- add - Jonathan - 2012-06-10 -->
+    <ul id="menu">
+    </ul>
+    <script>
+    </script>
+    </div>
+    <div id="h_r_bottom">
+      <div id="h_r_b_top">
+
+      </div>
+    
+
+
+</form>     </div>
+      
+    </div>
+  </div>
+</div>
+  <div align="center" style="margin-top: 20px;">
+    <div style="min-height:500px">
+  <div >
+    <div style="width:500px" >
+     <table class="table table-condensed table-striped table-hover">
+          <thead>
+            <tr>
+              <th>App</th>
+              <th>Projects Count</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="app in items">
+            <td>{{app.name}}</td>
+            <td>{{app.projectscount}}</td>
+           </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
+</div>
+        <hr />
+        <footer>
+            HuaHCoding &copy; 2009 - 2012 | <a href="./privacy_policy.php">Privacy Policy</a> | Cont&aacute;ctenos <a href="mailto:erreauele@gmail.com">Send email</a>
+        </footer>
+    </body>
+    <script type="text/javascript" src="js/applist.js"></script>
 </html>
+
