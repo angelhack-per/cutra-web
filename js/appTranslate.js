@@ -3,18 +3,10 @@ var myapp = angular.module('myapp', ['firebase']);
       myapp.controller('AppProjectsCtrl', ['$scope', 'angularFireCollection',
       function($scope, angularFireCollection) {
         var app = get('app');
-        var url = 'https://cutra.firebaseio.com/apps/'+app;
-
-        var dataRef = new Firebase();
-        dataRef.on('value', function(snapshot) {
-          if(snapshot.val() != null) {
-            var originalLanguage = snapshot.val().language;
-            url +='/projects/'+originalLanguage; 
-            $scope.projects = angularFireCollection(url, $scope);
-            $scope.appName=get('appName');
-            console.log($scope.items);
-          }
-        });
+        var originalLanguage = get('original');
+        var url = 'https://cutra.firebaseio.com/apps/'+app+'/projects/'+originalLanguage;
+        $scope.projects = angularFireCollection(url, $scope);
+        $scope.appName=get('appName');
       }
     ]);    
 

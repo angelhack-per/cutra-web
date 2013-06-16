@@ -66,6 +66,10 @@
               <input id="applicationName" type="text" class="input-block-level" placeholder="Application Name" name="applicationName">
             </div>
             <div>
+              <label for="applicationDescription">Description:</label>
+              <textarea id="applicationDescription" type="text" class="input-block-level" placeholder="Description" name="applicationDescription"></textarea>
+            </div>
+            <div>
               <label for="applicationLanguage">Language:</label>
               <select id="applicationLanguage" name="applicationLanguage">
                 <option value="AF">Afrikaans</option>
@@ -135,6 +139,7 @@
         var appRef = new Firebase('https://cutra.firebaseio.com/apps');
 
         var appName = $("#applicationName").val();
+        var appDescription = $("#applicationDescription").val();
         var lenguages = $("#applicationLanguage")[0].options;
         var appLanguage = lenguages[lenguages.selectedIndex].value;
         var appLanguageText = lenguages[lenguages.selectedIndex].text;
@@ -154,6 +159,7 @@
 
         var app = {
           name: appName, 
+          description:appDescription,
           projectscount:0, 
           type:appType, 
           language:appLanguage, 

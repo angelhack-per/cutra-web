@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html lang="en" >
+<html lang="en" ng-app="myapp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -60,55 +62,19 @@
     <div class="container">
       <div class="hero-unit">
         <h2 class="form-signin-heading">{{appName}}</h2>
-        <table class="table table-condensed table-striped table-hover">
+         <table class="table table-condensed table-striped table-hover">
           <thead>
             <tr>
               <th>Key</th>
-              <th>English</th>
-              <th>Spanish</th>
+              <th>Value</th>
             </tr>
           </thead>
           <tbody>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>YES</td>
-            <td class="ng-binding">YES</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>btnLogOut</td>
-            <td class="ng-binding">LogOut</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>btnCancel</td>
-            <td class="ng-binding">Cancel</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>Alert</td>
-            <td class="ng-binding">Alert</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>Moves</td>
-            <td class="ng-binding">Moves</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>connectionErrorTitle</td>
-            <td class="ng-binding">Connection error</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>connectionErrorMessage</td>
-            <td class="ng-binding">There was a connection error with the server. Please try again later</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
-          <tr ng-repeat="app in items" class="ng-scope">
-            <td>noDataUpdated</td>
-            <td class="ng-binding">No data updated</td>
-            <td class="ng-binding"><input type="text" clas="input-block-level" /></td>
-          </tr>
+          <tr ng-repeat="key in keys">
+            <td>{{language.name}}</a></td>
+            <td>{{language.percentage}}</td>
+            <td>{{language.contributors}}</td>
+           </tr>
           </tbody>
       </table>
       </div>
