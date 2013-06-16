@@ -7,6 +7,7 @@
                     "id":"31123123",
                     "projectscount": 12,
                     "language":"EN",
+                    "description":"Angry Birds is a video game franchise created by Finnish computer game developer Rovio Entertainment. Inspired primarily by a sketch of stylized wingless...",
                     "projects": {
 		                "SP": {
 		                	"name":"Spanish",
@@ -76,6 +77,7 @@
         	"name": "AngryBirds",
             "dev": "fred",
             "language": "EN",
+            "description":"Angry Birds is a video game franchise created by Finnish computer game developer Rovio Entertainment. Inspired primarily by a sketch of stylized wingless...",
 			"projects": {
                 "sp": {
                     "percentage": 30,
@@ -91,6 +93,7 @@
         	"name": "OuchMyBalls",
             "dev":"fred",
             "language": "EN",
+            "description":"Do I have to do a nutshot and a testicle assault on the same enemy? Do I actually have to kill them via the testicular assault or is it enough to just hit them once with it? I've so far only been hitting them once with it. Is that not enough?Does it have to be on a male character? Saints Row 2 allowed you to get nutshots on women, but the testicular assault wasn't in that game, so I'm unsure if this is a requirement here.",
             "projects": {
                 "fr": {
                     "percentage": 43,
@@ -99,7 +102,8 @@
             }
         },
         "103": {
-        	"name": "Passport",
+        	"name": "Magic Window",
+        	"description":"Magic Window is the absolute best and most beautiful live wallpaper and screen saver available for your Mac. It includes complete timelapse views of coasts, beaches, cities, mountains, lakes, and more. Watch as time and light slowly paint the skies beautiful colors and the cities transform from day to night and back again. ",
             "dev": "fred",
             "language": "SP",
             "projects": {
